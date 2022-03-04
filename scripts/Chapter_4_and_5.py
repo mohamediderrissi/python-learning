@@ -70,6 +70,44 @@ getInfos(b)
 t = [("Maroc", 212), ("Algerie", 213)]
 d = {number: country.upper() for country, number in t if(number > 100)}  # d == {212: 'MAROC', 213: 'ALGERIE'}
 
+
+# Regular Expressions:
+import re
+
+## re.findall():  returns a list of strings containing all matches.
+
+def test_findall():
+  string = 'hello 12 hi 89. Howdy 34'
+  pattern = '\d+'
+  print(re.findall(pattern, string))    # ['12', '89', '34']
+
+## re.split():
+
+def test_split():
+  string = '11 Twelve:12 Eighty nine:89.'
+  pattern = '\d+'
+  print(re.split(pattern, string))      # ['', ' Twelve:', ' Eighty nine:', '.']
+
+
+## re.sub(pattern, replace, string): 
+# The method returns a string where matched occurrences are replaced with the content of replace variable.
+
+def test_sub():
+  # Example remove all whitespaces:
+  string = 'abc  12 \
+    de 23 \n  f45  6'
+  pattern = '\s+'
+  replace = ''
+  print (re.sub(pattern, replace, string))    # abc12de23f456
+
+
+
+
+
+
+
+
+
 ####################################################
 ##############  Chapter 4: Text Versus Bytes
 ####################################################
