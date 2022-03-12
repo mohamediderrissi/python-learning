@@ -10,7 +10,7 @@
 # 
 #  is equals to :
 # 
-# target = decorator(decorator)
+# target = decorator(target)
 # 
 
 ############## Decorators executes at import time !
